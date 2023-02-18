@@ -6,7 +6,7 @@ const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () => {
 
-    const APIKey = '728b0ee6df5687559812bd3169ad77b7';
+    const APIKey = '45b92c33ff9c4c163914bacd21384821';
     const city = document.querySelector('.search-box input').value;
 
     if (city === '')
@@ -16,7 +16,7 @@ search.addEventListener('click', () => {
         .then(response => response.json())
         .then(json => {
 
-            if (json.cod === '404') {
+            if (json.cod === '404'){
                 container.style.height = '400px';
                 weatherBox.style.display = 'none';
                 weatherDetails.style.display = 'none';
@@ -52,7 +52,7 @@ search.addEventListener('click', () => {
                     break;
 
                 case 'Haze':
-                    image.src = 'images/mist.png';
+                    image.src = 'images/haze.png';
                     break;
 
                 default:
